@@ -8,6 +8,7 @@
     "run": "npx cypress run",
     "test": "npm-run-all clean run report -c",
     "test:headless": "npm-run-all clean \"run -- --headless\" report -c",
+    "test:headed": "npm-run-all clean \"run -- --headed\" report -c",
     "test:spec": "npm-run-all clean \"run -- --spec {1}\" report -c --",
     "report": "npx mochawesome-merge cypress/reports/*.json > mochawesome.json && npx marge mochawesome.json && open mochawesome-report/mochawesome.html && rm -f mochawesome.json"
   },
